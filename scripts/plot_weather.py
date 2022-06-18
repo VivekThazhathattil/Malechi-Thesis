@@ -1,7 +1,7 @@
 import csv
 import matplotlib.pyplot as plt
 
-file = open("weather.csv")
+file = open("data/weather.csv")
 weather_csv = csv.reader(file)
 header = next(weather_csv)
 rows = []
