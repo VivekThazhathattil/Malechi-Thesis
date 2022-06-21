@@ -16,7 +16,7 @@ num_rainy_days = []
 idx = 0
 for row in weather_csv:
     idx = idx + 1
-    if float(row[0]) >= 3 and float(row[0]) <= 30 and idx > 30:
+    if float(row[0]) >= 18 and float(row[0]) <= 23 and idx > 45:
         rows.append(row)
         std_week.append(row[0])
         max_temp.append(float(row[2]))
@@ -48,7 +48,7 @@ plt.legend([l_min_temp, l_max_temp, l_num_rainy_days, l_rainfall,
         "rainfall (mm)", "RH I (%)", "RH II (%)"], loc='center left',
     bbox_to_anchor=(1.05, 0.5))
 ax.set_xlabel("Standard Week", fontsize=12)
-ax.set_title("Weather data during cropping period (January 2021 to July 2021)", fontsize=12)
+ax.set_title("Weather data from April 2021 to June 2021", fontsize=12)
 ax.grid(axis = 'y')
 plt.tight_layout()
 plt.show()
